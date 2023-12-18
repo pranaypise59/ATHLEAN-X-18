@@ -540,7 +540,7 @@
   .strength_training_workout_det ul li {
     margin-right: 120px;
   }
-  .strength_training_workout_det ul li h6 {
+  .strength_training_workout_det ul li h6, .coman_title h6 {
     font-size: 33px;
   }
   .strength_training_workout_det ul li p {
@@ -1097,7 +1097,7 @@
   .strength_training_workout_det ul li {
     margin-right: 110px;
   }
-  .strength_training_workout_det ul li h6 {
+  .strength_training_workout_det ul li h6, .coman_title h6 {
     font-size: 33px;
   }
   .strength_training_workout_det ul li p {
@@ -2581,7 +2581,7 @@
   .strength_training_workout_det ul li {
     margin-right: 100px;
   }
-  .strength_training_workout_det ul li h6 {
+  .strength_training_workout_det ul li h6, .coman_title h6 {
     font-size: 33px;
   }
   .strength_training_workout_det ul li p {
@@ -3378,7 +3378,7 @@
   .strength_training_workout_det ul li {
     margin-right: 90px;
   }
-  .strength_training_workout_det ul li h6 {
+  .strength_training_workout_det ul li h6, .coman_title h6 {
     font-size: 30px;
   }
   .strength_training_workout_det ul li p {
@@ -4541,7 +4541,7 @@
   .strength_training_workout_det ul li {
     margin-right: 50px;
   }
-  .strength_training_workout_det ul li h6 {
+  .strength_training_workout_det ul li h6, .coman_title h6 {
     font-size: 24px;
   }
   .strength_training_workout_det ul li p {
@@ -5948,7 +5948,7 @@
     float: left;
     width: 50%;
   }
-  .strength_training_workout_det ul li h6 {
+  .strength_training_workout_det ul li h6, .coman_title h6 {
     font-size: 24px;
   }
   .strength_training_workout_det ul li p {
@@ -6475,7 +6475,7 @@
     float: left;
     width: 50%;
   }
-  .strength_training_workout_det ul li h6 {
+  .strength_training_workout_det ul li h6, .coman_title h6 {
     font-size: 15px;
   }
   .strength_training_workout_det ul li p {
@@ -8120,7 +8120,7 @@
     float: left;
     width: 50%;
   }
-  .strength_training_workout_det ul li h6 {
+  .strength_training_workout_det ul li h6, .coman_title h6 {
     font-size: 15px;
   }
   .strength_training_workout_det ul li p {

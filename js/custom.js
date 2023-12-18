@@ -223,3 +223,75 @@ jQuery(document).ready(function () {
 
 
 });
+
+
+
+
+
+const slider = document.getElementById("slider");
+const valueDisplay = document.getElementById("valueDisplay");
+const unitLabel = document.getElementById("unitLabel");
+
+slider.addEventListener("input", updateDisplay);
+
+function updateSliderValue(step) {
+const currentValue = parseInt(slider.value);
+const newValue = currentValue + step;
+if (newValue >= 0 && newValue <= 800) {
+slider.value = newValue;
+updateDisplay();
+}
+}
+
+function updateDisplay() {
+const thumbSize = 22; // Adjust this value based on your slider thumb size
+const thumbPosition = ((slider.value - slider.min) / (slider.max - slider.min)) * (slider.offsetWidth - thumbSize);
+valueDisplay.textContent = `${slider.value} ${unitLabel.textContent}`;
+valueDisplay.style.left = `calc(${thumbPosition}px + ${thumbSize / 2}px + 40px)`;
+console.log(valueDisplay.style.left,'hello bro')
+const gradient = `linear-gradient(to right, red 0%, red ${thumbPosition}px, #cfcfcf ${thumbPosition}px, #cfcfcf 100%)`;
+slider.style.background = gradient;
+}
+
+// Function to update the unit label based on the selected radio button
+function updateUnitLabel(unit) {
+unitLabel.textContent = unit;
+updateDisplay();
+}
+
+// Set "kg" as the default unit and update the display
+updateUnitLabel("kg");
+
+// Event listener for radio buttons to update the unit label
+document.getElementById("flexRadioDefault1").addEventListener("change", function () {
+updateUnitLabel("kg");
+});
+
+document.getElementById("flexRadioDefault2").addEventListener("change", function () {
+updateUnitLabel("lb");
+});
+
+const repsslider = document.getElementById("repsslider");
+const repsvalueDisplay = document.getElementById("repsvalueDisplay");
+
+repsslider.addEventListener("input", updateRepDisplay);
+
+function updateRepSliderValue(step) {
+const currentValue = parseInt(repsslider.value);
+const newValue = currentValue + step;
+if (newValue >= 0 && newValue <= 800) {
+repsslider.value = newValue;
+updateRepDisplay();
+}
+}
+
+function updateRepDisplay() {
+const thumbSize = 22; // Adjust this value based on your slider thumb size
+const thumbPosition = ((repsslider.value - repsslider.min) / (repsslider.max - repsslider.min)) * (repsslider.offsetWidth - thumbSize);
+repsvalueDisplay.textContent = `${repsslider.value} reps`;
+repsvalueDisplay.style.left = `calc(${thumbPosition}px + ${thumbSize / 2}px + 40px)`;
+
+const gradient = `linear-gradient(to right, red 0%, red ${thumbPosition}px, #cfcfcf ${thumbPosition}px, #cfcfcf 100%)`;
+repsslider.style.background = gradient;
+}
+updateRepDisplay()
