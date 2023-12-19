@@ -9652,3 +9652,45 @@
     padding: 20px 22px !important;
   }
 }
+
+
+@media screen and (max-width: 645px){
+.maxcalculator table{
+  font-size: 15px !important;
+  text-align: center;
+}
+}
+
+@media screen and (max-width: 560px){
+  .maxcalculator table{
+    font-size: 12px !important;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 475px){
+  .maxcalculator table{
+    font-size: 10px !important;
+  }
+  .maxcalculator .radio{
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 412px){
+  .maxcalculator table{
+    font-size: 8px !important;
+  }
+  .box input[type="range"]{
+    width: calc(85% - 60px) !important;
+  }
+}
+
+@media screen and (max-width: 390px){
+  .maxcalculator table{
+    font-size: 7px !important;
+  }
+  .box input[type="range"]{
+    width: calc(75% - 60px) !important;
+  }
+}

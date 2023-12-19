@@ -5451,7 +5451,7 @@ section, header, footer {
 }
 
 .box input[type="range"] {
-  width: 100%;
+  width: calc(100% - 70px);
   height: 10px;
   margin: 10px 0;
   position: relative;
@@ -5493,8 +5493,8 @@ section, header, footer {
   white-space: nowrap;
 }
 .box .button{
-  height: 31px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
   padding: 0px;
   margin: 0px;
