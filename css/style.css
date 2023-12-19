@@ -5443,11 +5443,13 @@ section, header, footer {
 
 .box .slider-container {
   position: relative;
-  width: 300px;
+  width: 42vw;
   margin: 0 10px;
   display: flex;
   gap: 5px;
   padding-top: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .box input[type="range"] {
@@ -5515,6 +5517,8 @@ section, header, footer {
   padding: 10px;
   color: white;
   margin-top: -10px;
+  width: 320px;
+  margin-bottom: 5px;
 }
 
 .box2 button{

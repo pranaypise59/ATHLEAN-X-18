@@ -9666,6 +9666,13 @@
     font-size: 12px !important;
     text-align: center;
   }
+  .box .slider-container{
+    width: 60vw;
+    margin-left: 0px;
+  }
+  .box2 input{
+    width: 70vw;
+  }
 }
 
 @media screen and (max-width: 475px){
@@ -9675,6 +9682,15 @@
   .maxcalculator .radio{
     margin-left: 0px !important;
   }
+  .box2 .btns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .box2 button{
+    padding: 3px 15px;
+    border-radius: 10px;
+  }
 }
 
 @media screen and (max-width: 412px){
@@ -9683,6 +9699,9 @@
   }
   .box input[type="range"]{
     width: calc(85% - 60px) !important;
+  }
+  .box .slider-container{
+    width: 70vw;
   }
 }
 

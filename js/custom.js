@@ -226,72 +226,203 @@ jQuery(document).ready(function () {
 
 
 
+const radio1 = document.getElementById('flexRadioDefault1');
+const radio2 = document.getElementById('flexRadioDefault2');
+const slider = document.getElementById('slider');
+const valueDisplay = document.getElementById('valueDisplay');
+const unitLabel = document.getElementById('unitLabel');
+const repsslider = document.getElementById('repsslider');
+const repsvalueDisplay = document.getElementById('repsvalueDisplay');
+const rootElement = document.getElementById('result_root');
 
+// Function to get the current value of the selected radio button
+function getSelectedRadioValue() {
+  return radio1.checked ? 'kg' : radio2.checked ? 'lb' : null;
+}
 
-const slider = document.getElementById("slider");
-const valueDisplay = document.getElementById("valueDisplay");
-const unitLabel = document.getElementById("unitLabel");
+// Function to calculate Epley's Formula with one decimal place
+function calculateOneRepMax(weight, reps) {
+  const result = (weight * (1 + 0.0333 * reps)) - 0.1;
+  updateOneRepMaxPer(result);
+  	// Round to the nearest 0.5
+	const roundedWeight = Math.round(result * 2) / 2;
 
-slider.addEventListener("input", updateDisplay);
+  return roundedWeight;
+}
 
+// Function to update the slider value and display
 function updateSliderValue(step) {
-const currentValue = parseInt(slider.value);
-const newValue = currentValue + step;
-if (newValue >= 0 && newValue <= 800) {
-slider.value = newValue;
-updateDisplay();
-}
+  const currentValue = parseInt(slider.value);
+  const newValue = currentValue + step;
+  const maxval = radio1.checked ? 272.5 : 600;
+
+  if (newValue >= 0 && newValue <= maxval) {
+    slider.value = newValue;
+    updateDisplay();
+    updateRootDisplay();
+  }
 }
 
+// Function to update the display based on the slider value
 function updateDisplay() {
-const thumbSize = 22; // Adjust this value based on your slider thumb size
-const thumbPosition = ((slider.value - slider.min) / (slider.max - slider.min)) * (slider.offsetWidth - thumbSize);
-valueDisplay.textContent = `${slider.value} ${unitLabel.textContent}`;
-valueDisplay.style.left = `calc(${thumbPosition}px + ${thumbSize / 2}px + 40px)`;
-console.log(valueDisplay.style.left,'hello bro')
-const gradient = `linear-gradient(to right, red 0%, red ${thumbPosition}px, #cfcfcf ${thumbPosition}px, #cfcfcf 100%)`;
-slider.style.background = gradient;
+  const thumbSize = 22;
+  const thumbPosition =
+    ((slider.value - slider.min) / (slider.max - slider.min)) *
+    (slider.offsetWidth - thumbSize);
+
+  valueDisplay.textContent = `${slider.value} ${unitLabel.textContent}`;
+  valueDisplay.style.left = `calc(${thumbPosition}px + ${thumbSize / 2}px + 40px)`;
+
+  const gradient = `linear-gradient(to right, red 0%, red ${thumbPosition}px, #cfcfcf ${thumbPosition}px, #cfcfcf 100%)`;
+  slider.style.background = gradient;
 }
 
 // Function to update the unit label based on the selected radio button
 function updateUnitLabel(unit) {
-unitLabel.textContent = unit;
-updateDisplay();
+  unitLabel.textContent = unit;
+  updateDisplay();
+}
+
+// Function to convert the slider value between lb and kg
+function convertSliderValue(fromUnit, toUnit) {
+  if (fromUnit === 'lb' && toUnit === 'kg') {
+	  slider.value /= 2.20462;
+	  slider.max = 272.5;
+  } else if (fromUnit === 'kg' && toUnit === 'lb') {
+	  slider.max= 600;
+	  slider.value *= 2.20462;
+  }
+  updateDisplay();
+}
+
+// Event listeners for radio buttons to update the unit label
+radio1.addEventListener('change', function () {
+  updateUnitLabel('kg');
+  convertSliderValue('lb', 'kg');
+  updateRootDisplay();
+});
+
+radio2.addEventListener('change', function () {
+  updateUnitLabel('lb');
+  convertSliderValue('kg', 'lb');
+  updateRootDisplay();
+});
+
+// Event listeners for slider input change
+slider.addEventListener('input', () => {
+  updateDisplay();
+  updateRootDisplay();
+});
+
+// Event listeners for reps slider input change
+repsslider.addEventListener('input', () => {
+  updateRepDisplay();
+  updateRootDisplay();
+});
+
+// Function to update the reps slider value and display
+function updateRepSliderValue(step) {
+  const currentValue = parseInt(repsslider.value);
+  const newValue = currentValue + step;
+
+  if (newValue >= 0 && newValue <= 20) {
+    repsslider.value = newValue;
+    updateRepDisplay();
+    updateRootDisplay();
+  }
+}
+
+// Function to update the reps display based on the slider value
+function updateRepDisplay() {
+  const thumbSize = 22;
+  const thumbPosition =
+    ((repsslider.value - repsslider.min) / (repsslider.max - repsslider.min)) *
+    (repsslider.offsetWidth - thumbSize);
+
+  repsvalueDisplay.textContent = `${repsslider.value} reps`;
+  repsvalueDisplay.style.left = `calc(${thumbPosition}px + ${thumbSize / 2}px + 40px)`;
+
+  const gradient = `linear-gradient(to right, red 0%, red ${thumbPosition}px, #cfcfcf ${thumbPosition}px, #cfcfcf 100%)`;
+  repsslider.style.background = gradient;
+}
+
+// Function to update the root element display
+function updateRootDisplay() {
+  const repval = calculateOneRepMax(slider.value, repsslider.value, getSelectedRadioValue());
+  rootElement.textContent = `${repval} ${getSelectedRadioValue()}`;
 }
 
 // Set "kg" as the default unit and update the display
-updateUnitLabel("kg");
-
-// Event listener for radio buttons to update the unit label
-document.getElementById("flexRadioDefault1").addEventListener("change", function () {
-updateUnitLabel("kg");
-});
-
-document.getElementById("flexRadioDefault2").addEventListener("change", function () {
-updateUnitLabel("lb");
-});
-
-const repsslider = document.getElementById("repsslider");
-const repsvalueDisplay = document.getElementById("repsvalueDisplay");
-
-repsslider.addEventListener("input", updateRepDisplay);
-
-function updateRepSliderValue(step) {
-const currentValue = parseInt(repsslider.value);
-const newValue = currentValue + step;
-if (newValue >= 0 && newValue <= 800) {
-repsslider.value = newValue;
+updateUnitLabel('kg');
 updateRepDisplay();
-}
+updateRootDisplay();
+
+function updateOneRepMaxPer(result=2.5){
+const oneRepMaxPer = document.getElementById('oneRepMaxPer');
+const percentages = [95, 90, 85, 80, 75, 70, 65, 60, 55, 50];
+
+// Ensure the table exists before proceeding
+if (oneRepMaxPer) {
+  // Select the second row (index 1)
+  const secondRow = oneRepMaxPer.rows[1];
+
+  // Loop through all the td elements in the second row
+  for (let i = 1; i < secondRow.cells.length; i++) {
+	const percentWeight = result * (percentages[i - 1] / 100);
+
+    const td = secondRow.cells[i];
+
+    // Set the value as the index
+    td.textContent = Math.round(percentWeight * 2) / 2;
+  }
 }
 
-function updateRepDisplay() {
-const thumbSize = 22; // Adjust this value based on your slider thumb size
-const thumbPosition = ((repsslider.value - repsslider.min) / (repsslider.max - repsslider.min)) * (repsslider.offsetWidth - thumbSize);
-repsvalueDisplay.textContent = `${repsslider.value} reps`;
-repsvalueDisplay.style.left = `calc(${thumbPosition}px + ${thumbSize / 2}px + 40px)`;
+// ===================================================
+const oldSchoolIronPer = document.getElementById('oldSchoolIronPer');
+const oldpercentages = [102.5, 97.5, 92.5, 87.5, 82.5, 77.5, 30];
 
-const gradient = `linear-gradient(to right, red 0%, red ${thumbPosition}px, #cfcfcf ${thumbPosition}px, #cfcfcf 100%)`;
-repsslider.style.background = gradient;
+// Ensure the table exists before proceeding
+if (oldSchoolIronPer) {
+  // Select the second row (index 1)
+  const secondRow = oldSchoolIronPer.rows[1];
+  for (let i = 1; i < secondRow.cells.length; i++) {
+	const percentWeight = result * (oldpercentages[i - 1] / 100);
+
+    const td = secondRow.cells[i];
+
+    // Set the value as the index
+    td.textContent = Math.round(percentWeight * 2) / 2;
+  }
 }
-updateRepDisplay()
+
+// ===================================================
+
+const estimatedRepsPer = document.getElementById('estimatedRepsPer');
+const estimatedrep = [1, 3, 5, 6, 7, 8, 9, 10, 12, 15];
+
+// Ensure the table exists before proceeding
+if (estimatedRepsPer) {
+  // Select the second row (index 1)
+  const secondRow = estimatedRepsPer.rows[1];
+
+  // Loop through all the td elements in the second row
+  for (let i = 1; i < secondRow.cells.length; i++) {
+
+	const td = secondRow.cells[i];
+
+	// Set the value as the index
+	td.textContent = calculateEstimatedWeight(result, estimatedrep[i - 1]);
+  }
+}
+}
+updateOneRepMaxPer()
+
+
+function calculateEstimatedWeight(oneRepMaxWeight, desiredReps) {
+	const estimatedWeight = oneRepMaxWeight / (1 + desiredReps / 30);
+	
+	// Round to the nearest 0.5
+	const roundedWeight = Math.round(estimatedWeight * 2) / 2;
+	
+	return roundedWeight;
+  }
