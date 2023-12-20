@@ -236,8 +236,11 @@ const repsvalueDisplay = document.getElementById('repsvalueDisplay');
 const rootElement = document.getElementById('result_root');
 
 // Function to get the current value of the selected radio button
+function isMetric() {
+  return radio1.checked;
+}
 function getSelectedRadioValue() {
-  return radio1.checked ? 'kg' : radio2.checked ? 'lb' : null;
+  return isMetric() ? 'kg' : 'lb';
 }
 
 // Function to calculate Epley's Formula with one decimal place
@@ -255,7 +258,7 @@ function calculateOneRepMax() {
 function updateSliderValue(step) {
   const currentValue = parseInt(slider.value);
   const newValue = currentValue + step;
-  const maxval = radio1.checked ? 272.5 : 600;
+  const maxval = isMetric() ? 272.5 : 600;
 
   if (newValue >= 0 && newValue <= maxval) {
     slider.value = newValue;
@@ -279,7 +282,8 @@ function updateDisplay() {
 }
 
 // Function to update the unit label based on the selected radio button
-function updateUnitLabel(unit) {
+function updateUnitLabel() {
+  const unit = getSelectedRadioValue();
   unitLabel.textContent = unit;
   updateDisplay();
 }
@@ -298,13 +302,13 @@ function convertSliderValue(fromUnit, toUnit) {
 
 // Event listeners for radio buttons to update the unit label
 radio1.addEventListener('change', function () {
-  updateUnitLabel('kg');
+  updateUnitLabel();
   convertSliderValue('lb', 'kg');
   updateRootDisplay();
 });
 
 radio2.addEventListener('change', function () {
-  updateUnitLabel('lb');
+  updateUnitLabel();
   convertSliderValue('kg', 'lb');
   updateRootDisplay();
 });
@@ -354,7 +358,7 @@ function updateRootDisplay() {
 }
 
 // Set "kg" as the default unit and update the display
-updateUnitLabel('kg');
+updateUnitLabel();
 updateRepDisplay();
 updateRootDisplay();
 
@@ -374,7 +378,7 @@ if (oneRepMaxPer) {
     const td = secondRow.cells[i];
 
     // Set the value as the index
-    td.textContent = Math.round(percentWeight * 2) / 2;
+    td.textContent = Math.round(percentWeight * 2) / 2 + ' ' + getSelectedRadioValue();
   }
 }
 
@@ -392,29 +396,30 @@ if (oldSchoolIronPer) {
     const td = secondRow.cells[i];
 
     // Set the value as the index
-    td.textContent = Math.round(percentWeight * 2) / 2;
+    td.textContent = Math.round(percentWeight * 2) / 2 + ' ' + getSelectedRadioValue();
   }
 }
 
 // ===================================================
-
-const estimatedRepsPer = document.getElementById('estimatedRepsPer');
-const estimatedrep = [1, 3, 5, 6, 7, 8, 9, 10, 12, 15];
-
-// Ensure the table exists before proceeding
-if (estimatedRepsPer) {
-  // Select the second row (index 1)
-  const secondRow = estimatedRepsPer.rows[1];
-
-  // Loop through all the td elements in the second row
-  for (let i = 1; i < secondRow.cells.length; i++) {
-
-	const td = secondRow.cells[i];
-
-	// Set the value as the index
-	td.textContent = calculateEstimatedWeight(result, estimatedrep[i - 1]);
+function roundToNearestHalf(value) {
+	return Math.round(value * 2) / 2;
   }
-}
+  
+  function calculateRM(weight, multiplier) {
+	return roundToNearestHalf(Math.round((10000 * result) / ((333 * multiplier) + 10000) * 10) / 10) + ' ' + getSelectedRadioValue();
+  }
+  
+  $(".onehundred").html(calculateRM(result, 0));
+  $(".threeRM").html(calculateRM(result, 2));
+  $(".fiveRM").html(calculateRM(result, 4));
+  $(".sixRM").html(calculateRM(result, 5));
+  $(".sevenRM").html(calculateRM(result, 6));
+  $(".eightRM").html(calculateRM(result, 7));
+  $(".nineRM").html(calculateRM(result, 8));
+  $(".tenRM").html(calculateRM(result, 9));
+  $(".twelveRM").html(calculateRM(result, 11));
+  $(".fifteenRM").html(calculateRM(result, 14));
+
 }
 updateOneRepMaxPer()
 
