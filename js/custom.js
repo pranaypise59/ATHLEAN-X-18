@@ -241,12 +241,13 @@ function getSelectedRadioValue() {
 }
 
 // Function to calculate Epley's Formula with one decimal place
-function calculateOneRepMax(weight, reps) {
-  const result = (weight * (1 + 0.0333 * reps)) - 0.1;
+function calculateOneRepMax() {
+	let weight = Number(slider.value);
+  let reps = Number(repsslider.value);
+  const result = (weight + ( 0.0333 * (weight * (reps-1))));
   updateOneRepMaxPer(result);
   	// Round to the nearest 0.5
 	const roundedWeight = Math.round(result * 2) / 2;
-
   return roundedWeight;
 }
 
@@ -348,7 +349,7 @@ function updateRepDisplay() {
 
 // Function to update the root element display
 function updateRootDisplay() {
-  const repval = calculateOneRepMax(slider.value, repsslider.value, getSelectedRadioValue());
+  const repval = calculateOneRepMax();
   rootElement.textContent = `${repval} ${getSelectedRadioValue()}`;
 }
 

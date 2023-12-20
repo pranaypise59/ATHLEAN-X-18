@@ -5443,7 +5443,7 @@ section, header, footer {
 
 .box .slider-container {
   position: relative;
-  width: 42vw;
+  width: 50%;
   margin: 0 10px;
   display: flex;
   gap: 5px;

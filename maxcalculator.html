@@ -201,7 +201,7 @@
                             <section class="profile-sec" style="background: #0e0e0e; padding: 50px 0px 0px 0px">
                                 <div class="container">
                                     <div
-                                        style="width: 85vw; position: relative; left: 48%; transform: translateX(-50%);">
+                                        style="width: 85vw; position: relative; left: 48%; transform: translateX(-50%);max-width: 100%;">
                                         <div class="accordion" id="accordionExample">
                                             <div class="accordion-item">
                                                 <h2 class="accordion-header" id="headingthree">
@@ -263,8 +263,8 @@
                                                                                     onclick="updateSliderValue(-2.5)">
                                                                                     -
                                                                                 </div>
-                                                                                <input type="range" min="2.5" max="275.5"
-                                                                                    value="2.5" step="2.5"
+                                                                                <input type="range" min="2.5"
+                                                                                    max="275.5" value="2.5" step="2.5"
                                                                                     id="slider" />
                                                                                 <div class="button"
                                                                                     onclick="updateSliderValue(2.5)">
@@ -326,7 +326,7 @@
                             <section class="profile-sec" style="background: #0e0e0e; padding: 50px 0px 0px 0px">
                                 <div class="container">
                                     <div
-                                        style="width: 85vw; position: relative; left: 48%; transform: translateX(-50%);">
+                                        style="width: 85vw; position: relative; left: 48%; transform: translateX(-50%);max-width: 100%;">
                                         <div class="accordion" id="accordionExample">
                                             <div class="accordion-item">
                                                 <h2 class="accordion-header" id="headingthree">
@@ -348,7 +348,8 @@
                                                                                 one rep max is.
                                                                             </p>
                                                                             <div class="coman_title">
-                                                                                <h1 style="margin-left: 2%" id="result_root">
+                                                                                <h1 style="margin-left: 2%"
+                                                                                    id="result_root">
                                                                                     2.5 kg
                                                                                 </h1>
                                                                             </div>
@@ -359,109 +360,83 @@
                                                                     <div class="form-check form-check-2"
                                                                         style="padding-top: 0"></div>
                                                                     <!--  -->
-<div class="col-12 col-sm-12 col-md-12 align-self-end">
-    <div class="form-group box">
-        <label>One Rep Max Percentages</label>
-        <table style="width: 90%; margin: auto" id="oneRepMaxPer">
-            <tr>
-                <th>Percent</th>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    95%
-                </td>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    90%
-                </td>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    85%
-                </td>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    80%
-                </td>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    75%
-                </td>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    70%
-                </td>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    65%
-                </td>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    60%
-                </td>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    55%
-                </td>
-                <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
-                    50%
-                </td>
-            </tr>
-            <tr>
-                <th>Weight</th>
-                <td class="whitecol" style="padding: 10px 5px">
-                    107.5 lb
-                </td>
-                <td class="whitecol" style="padding: 10px 5px">
-                    102 lb
-                </td>
-                <td class="whitecol" style="padding: 10px 5px">
-                    96.5 lb
-                </td>
-                <td class="whitecol" style="padding: 10px 5px">
-                    90.5 lb
-                </td>
-                <td class="whitecol" style="padding: 10px 5px">
-                    85 lb
-                </td>
-                <td class="whitecol" style="padding: 10px 5px">
-                    79.5 lb
-                </td>
-                <td class="whitecol" style="padding: 10px 5px">
-                    73.5 lb
-                </td>
-                <td class="whitecol" style="padding: 10px 5px">
-                    68 lb
-                </td>
-                <td class="whitecol" style="padding: 10px 5px">
-                    62.5 lb
-                </td>
-                <td class="whitecol" style="padding: 10px 5px">
-                    56.5 lb
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
+                                                                    <div
+                                                                        class="col-12 col-sm-12 col-md-12 align-self-end">
+                                                                        <div class="form-group box">
+                                                                            <label>One Rep Max Percentages</label>
+                                                                            <table style="width: 90%; margin: auto"
+                                                                                id="oneRepMaxPer">
+                                                                                <tr>
+                                                                                    <th>Percent</th>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px;font-weight: bold;">
+                                                                                        95%
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px; font-weight: bold;">
+                                                                                        90%
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px; font-weight: bold;">
+                                                                                        85%
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px; font-weight: bold;">
+                                                                                        80%
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px; font-weight: bold;">
+                                                                                        75%
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px; font-weight: bold;">
+                                                                                        70%
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px; font-weight: bold;">
+                                                                                        65%
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px; font-weight: bold;">
+                                                                                        60%
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px; font-weight: bold;">
+                                                                                        55%
+                                                                                    </td>
+                                                                                    <td
+                                                                                        style="padding: 10px 5px; font-weight: bold;">
+                                                                                        50%
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr class="numberRows">
+                                                                                    <th>Weight</th>
+                                                                                    <td class="rmValues ninetyfive "
+                                                                                        style="padding: 10px 5px"></td>
+                                                                                    <td class="rmValues ninety"
+                                                                                        style="padding: 10px 5px"></td>
+                                                                                    <td class="rmValues eightyfive"
+                                                                                        style="padding: 10px 5px"></td>
+                                                                                    <td class="rmValues eighty"
+                                                                                        style="padding: 10px 5px"></td>
+                                                                                    <td class="rmValues seventyfive"
+                                                                                        style="padding: 10px 5px"></td>
+                                                                                    <td class="rmValues seventy"
+                                                                                        style="padding: 10px 5px"></td>
+                                                                                    <td class="rmValues sixtyfive"
+                                                                                        style="padding: 10px 5px">
+
+                                                                                    </td>
+                                                                                    <td class="rmValues sixty"
+                                                                                        style="padding: 10px 5px"></td>
+                                                                                    <td class="rmValues fiftyfive"
+                                                                                        style="padding: 10px 5px"></td>
+                                                                                    <td class="rmValues fifty"
+                                                                                        style="padding: 10px 5px"></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
 
                                                                     <!-- Horizontal line -->
                                                                     <div class="form-check form-check-2"
@@ -469,84 +444,57 @@
                                                                     <!--  -->
 
                                                                     <div
-                                                                        class="col-12 col-sm-12 col-md-12 align-self-end">
+                                                                        class="col-12 col-sm-12 col-md-12 align-self-end" id="oldschool">
                                                                         <div class="form-group box">
                                                                             <label>Old School Iron Percentages</label>
-                                                                            <table style="width: 90%; margin: auto" id="oldSchoolIronPer">
-                                                                                <tr>
+                                                                            <table style="width: 90%; margin: auto"
+                                                                                id="oldSchoolIronPer">
+                                                                                <tr class="repRows">
                                                                                     <th>Percent</th>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         102.5%
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         97.5%
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         92.5%
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         87.5%
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         82.5%
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         77.5%
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         30%
                                                                                     </td>
                                                                                 </tr>
-                                                                                <tr>
+                                                                                <tr class="numberRows">
                                                                                     <th>Weight</th>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues onehundredtwo"
                                                                                         style="padding: 10px 5px">
-                                                                                        116 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues ninetyseven"
                                                                                         style="padding: 10px 5px">
-                                                                                        110.5 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues ninetytwo"
                                                                                         style="padding: 10px 5px">
-                                                                                        105 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues eightyseven"
                                                                                         style="padding: 10px 5px">
-                                                                                        99 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues eightytwo"
                                                                                         style="padding: 10px 5px">
-                                                                                        93.5 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues seventyseven"
                                                                                         style="padding: 10px 5px">
-                                                                                        88 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues thirty"
                                                                                         style="padding: 10px 5px">
-                                                                                        34 lb
                                                                                     </td>
                                                                                 </tr>
                                                                             </table>
@@ -562,109 +510,80 @@
                                                                         class="col-12 col-sm-12 col-md-12 align-self-end">
                                                                         <div class="form-group box">
                                                                             <label>Estimated Reps & Weight</label>
-                                                                            <table style="width: 90%; margin: auto" id="estimatedRepsPer">
-                                                                                <tr>
+                                                                            <table style="width: 90%; margin: auto"
+                                                                                id="estimatedRepsPer">
+                                                                                <tr class="repRows">
                                                                                     <th>Reps</th>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         1
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px;font-weight: bold;">
                                                                                         3
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         5
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         6
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         7
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         8
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         9
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         10
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         12
                                                                                     </td>
-                                                                                    <td style="
-                                                padding: 10px 5px;
-                                                font-weight: bold;
-                                              ">
+                                                                                    <td style="padding: 10px 5px; font-weight: bold;">
                                                                                         15
                                                                                     </td>
                                                                                 </tr>
-                                                                                <tr>
+                                                                                <tr class="numberRows">
                                                                                     <th>Weight</th>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues onehundred"
                                                                                         style="padding: 10px 5px">
                                                                                         113.5 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues threeRM"
                                                                                         style="padding: 10px 5px">
                                                                                         106 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues fiveRM"
                                                                                         style="padding: 10px 5px">
                                                                                         100 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues sixRM"
                                                                                         style="padding: 10px 5px">
                                                                                         97 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues sevenRM"
                                                                                         style="padding: 10px 5px">
                                                                                         94.5 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues eightRM"
                                                                                         style="padding: 10px 5px">
                                                                                         92 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues nineRM"
                                                                                         style="padding: 10px 5px">
                                                                                         89.5 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues tenRM"
                                                                                         style="padding: 10px 5px">
                                                                                         87 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues twelveRM"
                                                                                         style="padding: 10px 5px">
                                                                                         83 lb
                                                                                     </td>
-                                                                                    <td class="whitecol"
+                                                                                    <td class="rmValues fifteenRM"
                                                                                         style="padding: 10px 5px">
                                                                                         77.5 lb
                                                                                     </td>
@@ -701,7 +620,7 @@
                             <section class="profile-sec" style="background: #0e0e0e; padding: 50px 0px 0px 0px">
                                 <div class="container">
                                     <div
-                                        style="width: 85vw; position: relative; left: 48%; transform: translateX(-50%);">
+                                        style="width: 85vw; position: relative; left: 48%; transform: translateX(-50%);max-width: 100%;">
                                         <div class="accordion" id="accordionExample">
                                             <div class="accordion-item">
                                                 <h2 class="accordion-header" id="headingthree"
