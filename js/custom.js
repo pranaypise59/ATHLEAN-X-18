@@ -289,13 +289,23 @@ function updateUnitLabel() {
 }
 
 // Function to convert the slider value between lb and kg
+
+function getlbs(kgs) {
+	return Math.round(kgs * 2.2046);
+}
+   function getkgs(lbs) {
+	return Math.round(lbs / 2.2046);
+}
+
 function convertSliderValue(fromUnit, toUnit) {
   if (fromUnit === 'lb' && toUnit === 'kg') {
-	  slider.value /= 2.20462;
+	//   slider.value /= 2.20462;
+	  slider.value = getkgs(slider.value);
 	  slider.max = 272.5;
   } else if (fromUnit === 'kg' && toUnit === 'lb') {
 	  slider.max= 600;
-	  slider.value *= 2.20462;
+	//   slider.value *= 2.20462;
+	  slider.value = getlbs(slider.value);
   }
   updateDisplay();
 }
