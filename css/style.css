@@ -5441,7 +5441,7 @@ section, header, footer {
   display: none;
 }
 
-.box .slider-container {
+#mexcalculator-sec .box .slider-container {
   position: relative;
   width: 50%;
   margin: 0 10px;
@@ -5452,7 +5452,7 @@ section, header, footer {
   justify-content: center;
 }
 
-.box input[type="range"] {
+#mexcalculator-sec .box input[type="range"] {
   width: calc(100% - 70px);
   height: 10px;
   margin: 10px 0;
@@ -5461,7 +5461,7 @@ section, header, footer {
   border-radius: 10px;
 }
 
-.box input[type="range"]::-webkit-slider-thumb {
+#mexcalculator-sec .box input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /* Remove default styles on WebKit browsers */
   width: 24px; /* Set the width of the thumb */
   height: 24px; /* Set the height of the thumb */
@@ -5471,7 +5471,7 @@ section, header, footer {
   /* margin-top: -10px; Adjust vertical alignment */
 }
 
-.box input[type="range"]::-moz-range-thumb {
+#mexcalculator-sec .box input[type="range"]::-moz-range-thumb {
   width: 24px; /* Set the width of the thumb */
   height: 24px; /* Set the height of the thumb */
   background-color: white; /* Set the background color of the thumb */
@@ -5480,21 +5480,21 @@ section, header, footer {
   /* margin-top: -10px; Adjust vertical alignment */
 }
 
-.box .value-display {
+#mexcalculator-sec .box .value-display {
   position: absolute;
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.box .unit-label {
+#mexcalculator-sec .box .unit-label {
   margin-top: 10px;
   display: none;
 }
-#valueDisplay, #repsvalueDisplay{
+#mexcalculator-sec #valueDisplay, #repsvalueDisplay{
   white-space: nowrap;
 }
-.box .button{
+#mexcalculator-sec .box .button{
   height: 35px;
   width: 35px;
   border-radius: 50%;
@@ -5510,7 +5510,7 @@ section, header, footer {
   cursor: pointer;
 }
 
-.box2 input{
+#mexcalculator-sec .box2 input{
   background: transparent;
   border: 1px solid red;
   border-radius: 6px;
@@ -5521,11 +5521,39 @@ section, header, footer {
   margin-bottom: 5px;
 }
 
-.box2 button{
+#mexcalculator-sec .box2 button{
   padding: 7px 25px;
   border-radius: 10px;
 }
 
-.maxcalculator .accordion-item .accordion-button:not(.collapsed)::after{
+#mexcalculator-sec .maxcalculator .accordion-item .accordion-button:not(.collapsed)::after{
 content: '' !important;
+}
+
+#mexcalculator-sec .pullup-col {
+  display: inline-block;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#mexcalculator-sec .pullup-reprow {
+  margin-bottom: 5px;
+}
+
+#mexcalculator-sec .pullup-week {
+  font-weight: bold;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+#mexcalculator-sec .pullup-day {
+  font-weight: bold;
+  color: red;
+}
+
+#mexcalculator-sec .pullup-reps {
+  margin-left: 10px;
+  letter-spacing: 3px;
 }

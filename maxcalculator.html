@@ -159,7 +159,7 @@
         </div>
     </header>
 
-    <section class="workout-tebmenu-sec maxcalculator" style="background: #0e0e0e">
+    <section class="workout-tebmenu-sec maxcalculator" id="mexcalculator-sec" style="background: #0e0e0e">
         <div class="container">
             <div class="teb-menu" style="margin-top: 60px">
                 <ul class="nav nav-teb-menu" id="teb-menu-tab" role="tablist">
@@ -363,7 +363,7 @@
                                                                         class="col-12 col-sm-12 col-md-12 align-self-end">
                                                                         <div class="form-group box">
                                                                             <label>One Rep Max Percentages</label>
-                                                                            <table style="width: 90%; margin: auto"
+                                                                            <table class="result-table" style="width: 90%; margin: auto"
                                                                                 id="oneRepMaxPer">
                                                                                 <tr>
                                                                                     <th>Percent</th>
@@ -446,7 +446,7 @@
                                                                         class="col-12 col-sm-12 col-md-12 align-self-end" id="oldschool">
                                                                         <div class="form-group box">
                                                                             <label>Old School Iron Percentages</label>
-                                                                            <table style="width: 90%; margin: auto"
+                                                                            <table class="result-table" style="width: 90%; margin: auto"
                                                                                 id="oldSchoolIronPer">
                                                                                 <tr class="repRows">
                                                                                     <th>Percent</th>
@@ -509,7 +509,7 @@
                                                                         class="col-12 col-sm-12 col-md-12 align-self-end">
                                                                         <div class="form-group box">
                                                                             <label>Estimated Reps & Weight</label>
-                                                                            <table style="width: 90%; margin: auto"
+                                                                            <table class="result-table" style="width: 90%; margin: auto"
                                                                                 id="estimatedRepsPer">
                                                                                 <tr class="repRows">
                                                                                     <th>Reps</th>
@@ -640,13 +640,17 @@
                                                                     </div>
                                                                     <div class="btns"
                                                                         style="margin: 25px; margin-left: 0px">
-                                                                        <button>Compute</button>
+                                                                        <button id="compute">Compute</button>
                                                                         <button>Reset</button>
                                                                     </div>
                                                                 </div>
+                                                                    <div id="printwrap">
+                                                                        <div id="pullup-results">
+                                                                           
+                                                                        </div>
+                                                                     </div>
                                                                 <div class="posted_by_btn"
-                                                                    style="margin-bottom: 40px; cursor: pointer;">Print
-                                                                    Chart</div>
+                                                                    style="margin-bottom: 40px; cursor: pointer;">Print Chart</div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -668,6 +672,82 @@
     <script src="js/owl.carousel.js" type="text/javascript"></script>
     <script src="js/smartmenu.js" type="text/javascript"></script>
     <script src="js/custom.js" type="text/javascript"></script>
+    <script src="js/maxcalculator.js" type="text/javascript"></script>
+    <script>
+  function onComputeClick() {
+	const resultEle = document.getElementById('pullup-results');
+	//fetch it with api call. for styling,this dummy data is used.
+const result = ` <div class='pullup-col'><div class='pullup-reprow'><span class='pullup-week'>WEEK 1</span></div><div class='pullup-reprow'><span class='pullup-day'>DAY 1:</span>
+<span class='pullup-reps'>2,1,1,1,1</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 2:</span>
+<span class='pullup-reps'>2,1,1,1,1</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 3:</span>
+<span class='pullup-reps'>OFF</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 4:</span>
+<span class='pullup-reps'>3,2,1,1,1</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 5:</span>
+<span class='pullup-reps'>3,2,1,1,1</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 6:</span>
+<span class='pullup-reps'>5,2,2,1,1</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 7:</span>
+<span class='pullup-reps'>Off</span></div>
+<div class='pullup-reprow'><span class='pullup-week'>WEEK 2</span></div><div class='pullup-reprow'><span class='pullup-day'>DAY 1:</span>
+<span class='pullup-reps'>5,4,3,2,2</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 2:</span>
+<span class='pullup-reps'>5,4,3,3,2</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 3:</span>
+<span class='pullup-reps'>OFF</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 4:</span>
+<span class='pullup-reps'>5,4,4,3,2</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 5:</span>
+<span class='pullup-reps'>5,5,4,3,2</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 6:</span>
+<span class='pullup-reps'>6,5,4,3,2</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 7:</span>
+<span class='pullup-reps'>OFF</span></div>
+</div>
+	<div class='pullup-col'>
+	<div class='pullup-reprow'><span class='pullup-week'>WEEK 3</span></div><div class='pullup-reprow'><span class='pullup-day'>DAY 1:</span>
+<span class='pullup-reps'>6,5,4,3,3</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 2:</span>
+<span class='pullup-reps'>6,5,4,4,3</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 3:</span>
+<span class='pullup-reps'>OFF</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 4:</span>
+<span class='pullup-reps'>6,5,5,4,3</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 5:</span>
+<span class='pullup-reps'>7,6,5,4,3</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 6:</span>
+<span class='pullup-reps'>7,6,5,4,4</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 7:</span>
+<span class='pullup-reps'>OFF</span></div>
+<div class='pullup-reprow'><span class='pullup-week'>WEEK 4</span></div><div class='pullup-reprow'><span class='pullup-day'>DAY 1:</span>
+<span class='pullup-reps'>7,6,5,5,4</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 2:</span>
+<span class='pullup-reps'>7,6,6,5,4</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 3:</span>
+<span class='pullup-reps'>OFF</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 4:</span>
+<span class='pullup-reps'>8,7,6,5,4</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 5:</span>
+<span class='pullup-reps'>3,3,2,2,2</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 6:</span>
+<span class='pullup-reps'>Challenge</span></div>
+<div class='pullup-reprow'><span class='pullup-day'>DAY 7:</span>
+<span class='pullup-reps'>OFF</span></div>
+</div>`
+
+const title = `<div class="coman_title">
+<h2 style="border-bottom: none; margin-bottom: 0">
+	PULLUP OR SHUTUP
+</h2>
+</div>`
+
+resultEle.innerHTML = title + result
+  }
+
+document.getElementById('compute').addEventListener('click', onComputeClick);
+    </script>
     <!--END-JS-->
 </body>
 

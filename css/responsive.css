@@ -9655,61 +9655,61 @@
 
 
 @media screen and (max-width: 645px){
-.maxcalculator table{
+  #mexcalculator-sec .result-table{
   font-size: 15px !important;
   text-align: center;
 }
 }
 
 @media screen and (max-width: 560px){
-  .maxcalculator table{
+  #mexcalculator-sec .result-table{
     font-size: 12px !important;
     text-align: center;
   }
-  .box .slider-container{
+  #mexcalculator-sec .box .slider-container{
     width: 60vw;
     margin-left: 0px;
   }
-  .box2 input{
+  #mexcalculator-sec .box2 input{
     width: 70vw;
   }
 }
 
 @media screen and (max-width: 475px){
-  .maxcalculator table{
+  #mexcalculator-sec .result-table{
     font-size: 10px !important;
   }
-  .maxcalculator .radio{
+  #mexcalculator-sec .radio{
     margin-left: 0px !important;
   }
-  .box2 .btns{
+  #mexcalculator-sec .box2 .btns{
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  .box2 button{
+  #mexcalculator-sec .box2 button{
     padding: 3px 15px;
     border-radius: 10px;
   }
 }
 
 @media screen and (max-width: 412px){
-  .maxcalculator table{
+  #mexcalculator-sec .result-table{
     font-size: 8px !important;
   }
-  .box input[type="range"]{
+  #mexcalculator-sec .box input[type="range"]{
     width: calc(85% - 60px) !important;
   }
-  .box .slider-container{
+  #mexcalculator-sec .box .slider-container{
     width: 70vw;
   }
 }
 
 @media screen and (max-width: 390px){
-  .maxcalculator table{
+  #mexcalculator-sec .result-table{
     font-size: 7px !important;
   }
-  .box input[type="range"]{
+  #mexcalculator-sec .box input[type="range"]{
     width: calc(75% - 60px) !important;
   }
 }
