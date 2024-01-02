@@ -1,0 +1,31 @@
+#pullup-results{
+    margin-top: 50px;
+}
+.pullup-col {
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.pullup-reprow {
+    margin-bottom: 5px;
+}
+
+.pullup-week {
+    font-weight: bold;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.pullup-day {
+    font-weight: bold;
+    color: red;
+}
+
+.pullup-reps {
+    margin-left: 10px;
+    letter-spacing: 3px;
+    color: black;
+}
