@@ -641,7 +641,7 @@
                                                                     <div class="btns"
                                                                         style="margin: 25px; margin-left: 0px">
                                                                         <button id="compute">Compute</button>
-                                                                        <button>Reset</button>
+                                                                        <button id="reset">Reset</button>
                                                                     </div>
                                                                 </div>
                                                                     <div id="printwrap">
@@ -746,7 +746,12 @@ const title = `<div class="coman_title">
 resultEle.innerHTML = title + result
   }
 
+  function onResetClick() {
+    const resultEle = document.getElementById('pullup-results');
+    resultEle.innerHTML = ''
+  }
 document.getElementById('compute').addEventListener('click', onComputeClick);
+document.getElementById('reset').addEventListener('click', onResetClick);
     </script>
     <!--END-JS-->
 </body>
