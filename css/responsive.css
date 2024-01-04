@@ -8132,7 +8132,7 @@
   }
   .workout-tebmenu-sec .teb-menu .nav li .nav-link {
     padding: 2px 13px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .note-list li a {
     padding: 2px 10px;
@@ -9654,6 +9654,13 @@
 }
 
 
+@media screen and (max-width: 960px){
+  #mexcalculator-sec .result-table{
+  font-size: 15px !important;
+  text-align: center;
+}
+}
+
 @media screen and (max-width: 645px){
   #mexcalculator-sec .result-table{
   font-size: 15px !important;
@@ -9661,7 +9668,7 @@
 }
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 590px){
   #mexcalculator-sec .result-table{
     font-size: 12px !important;
     text-align: center;
@@ -9675,9 +9682,9 @@
   }
 }
 
-@media screen and (max-width: 475px){
+@media screen and (max-width: 500px){
   #mexcalculator-sec .result-table{
-    font-size: 10px !important;
+    font-size: 9px !important;
   }
   #mexcalculator-sec .radio{
     margin-left: 0px !important;
@@ -9711,5 +9718,10 @@
   }
   #mexcalculator-sec .box input[type="range"]{
     width: calc(75% - 60px) !important;
+  }
+}
+@media screen and (max-width: 370px){
+  #mexcalculator-sec .result-table{
+    font-size: 5px !important;
   }
 }
