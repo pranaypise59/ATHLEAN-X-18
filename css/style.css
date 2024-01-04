@@ -3551,7 +3551,22 @@ section, header, footer {
   justify-content: start;
   text-align: left;
   margin: 0px;
+  padding-bottom: 0;
+  margin-bottom: 10px;
 }
+.comment-box-det-top .box-images ul::-webkit-scrollbar {
+  border-radius: 10px;
+  height: 5px;
+}
+.comment-box-det-top .box-images ul::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.comment-box-det-top .box-images ul::-webkit-scrollbar-thumb {
+  background-color:rgba(255, 255, 255, 0.143); /* Adjust opacity and color */
+  border-radius: 10px;
+}
+
 .profile-sec .box-images ul {
   float: left;
   justify-content: center;
