@@ -442,3 +442,11 @@ function calculateEstimatedWeight(oneRepMaxWeight, desiredReps) {
 	
 	return roundedWeight;
   }
+
+  function showDialog() {
+	document.getElementById("notification-dialog").showModal();
+  }
+  
+  function closeDialog() {
+	document.getElementById("notification-dialog").close();
+  }

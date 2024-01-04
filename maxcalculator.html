@@ -101,9 +101,17 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4 col-xxl-4 align-self-center">
-                    <div class="header_info_right">
-                        <a href="mailto:" class="mail_link"><img src="images/email_icon.png" alt="#"
-                                class="img-fluid" /><span>22</span></a>
+                    <div class="header_info_right"> <a onclick="showDialog()" class="mail_link"><img src="images/email_icon.png" alt="#" class="img-fluid"/><span>22</span></a>
+                        <dialog id="notification-dialog">
+                          <h2>New Messages</h2>
+                          <div class="messages">
+                            <p>Message 1 can be shown Here</p>
+                            <!-- <hr> -->
+                            <p>Sample Message 2</p>
+                          </div>
+                          <p class="more">More Messages</p>
+                          <button onclick="closeDialog()">X</button>
+                        </dialog>
                         <div class="user_block">
                             <div class="dropdown">
                                 <button class="btn btn-secondary" type="button" id="dropdownMenuButton1"
