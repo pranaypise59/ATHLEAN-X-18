@@ -3504,7 +3504,7 @@ section, header, footer {
   width: 100%;
 }
 .box-images ul {
-  float: right;
+  /* float: right; */
   position: relative;
   transform: skew(-12deg);
   justify-content: end;
@@ -3546,7 +3546,7 @@ section, header, footer {
   width: 100%;
   max-width: 100%;
 }
-.comment-box-det-top .box-images ul {
+.box-images ul {
   float: left;
   justify-content: start;
   text-align: left;
@@ -3554,15 +3554,15 @@ section, header, footer {
   padding-bottom: 0;
   margin-bottom: 10px;
 }
-.comment-box-det-top .box-images ul::-webkit-scrollbar {
+.box-images ul::-webkit-scrollbar {
   border-radius: 10px;
   height: 5px;
 }
-.comment-box-det-top .box-images ul::-webkit-scrollbar-track {
+.box-images ul::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.comment-box-det-top .box-images ul::-webkit-scrollbar-thumb {
+.box-images ul::-webkit-scrollbar-thumb {
   background-color:rgba(255, 255, 255, 0.143); /* Adjust opacity and color */
   border-radius: 10px;
 }

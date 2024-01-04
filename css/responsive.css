@@ -4057,6 +4057,14 @@
   }
 }
 @media (min-width: 992px) {
+  .header_info .box-images ul{
+    max-width: calc(50vw - 100px);
+    overflow-x: scroll;
+    justify-content: start;
+  }
+  .box-images {
+    max-width: calc(50vw - 100px);
+  }
   .weekly-performance-teb .collapse:not(.show) {
     display: block !important;
   }
