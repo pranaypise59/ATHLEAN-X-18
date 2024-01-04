@@ -337,7 +337,7 @@ section, header, footer {
   margin-left: 35px;
 }
 .header_info_right .user_block .dropdown {
-  padding-right: 40px;
+  padding-right: 10px;
 }
 .header_info_right .user_block button {
   background: none !important;
@@ -377,7 +377,7 @@ section, header, footer {
   font-weight: normal;
 }
 .dropdown-toggle::after {
-  background: url("../images/arrow_icon.png");
+  /* background: url("../images/arrow_icon.png"); */
   content: "";
   border: none;
   width: 27px;
