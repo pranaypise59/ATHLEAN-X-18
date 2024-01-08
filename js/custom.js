@@ -444,9 +444,19 @@ function calculateEstimatedWeight(oneRepMaxWeight, desiredReps) {
   }
 
   function showDialog() {
-	document.getElementById("notification-dialog").showModal();
+	document.getElementById("notification-dialog").style.display = "block";
+	document.getElementById("plaintriangle").style.display = "block";
   }
   
   function closeDialog() {
-	document.getElementById("notification-dialog").close();
+	document.getElementById("notification-dialog").style.display = "none";
+	document.getElementById("plaintriangle").style.display = "none";
+  }
+
+  function toggleDialog() {
+	if (document.getElementById("notification-dialog").style.display == "none") {
+	  showDialog();
+	} else {
+	  closeDialog();
+	}
   }

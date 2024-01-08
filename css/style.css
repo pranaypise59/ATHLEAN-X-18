@@ -50,6 +50,7 @@ img {
   margin: 0px auto;
   max-height: auto;
   width: auto;
+  border-radius: 5;
 }
 ul, li, p {
   list-style: none;
@@ -1976,7 +1977,7 @@ section, header, footer {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 3px;
-  border-bottom: 2px solid #595959;
+  /* border-bottom: 2px solid #595959; */
   margin-bottom: 33px;
   padding-bottom: 10px;
   float: left;
@@ -5575,24 +5576,77 @@ content: '' !important;
 
 #notification-dialog {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  width: 500px;
-  max-width: 90vw;
-  z-index: 100;
+  width: 400px;
+  max-width: 80vw;
   border-color: red;
+  position: absolute;
+  right: 14vw;
+  top: 70px;
+  color: black;
+  z-index: 99999999999999;
+  transition: ease-in-out 0.4s;
+  display: none;
 }
 
-/* Style the dialog title */
-#notification-dialog h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+.header_info_right #plaintriangle {
+  filter: invert(1);
+  height: 15px;
+  position: absolute;
+  top: 34px;
+  width: 25px;
+  z-index: 99;
+  left: 3px;
+  display: none;
+}
+#notification-dialog .title{
+ display: flex;
+ align-items: center; 
+ justify-content: space-between;
+ margin-bottom: 15px;
+}
+
+#notification-dialog .title h2{
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: normal;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#notification-dialog .title span{
+  background: linear-gradient(to right, #ff4949, #cf0e0e);
+  border-radius: 5px;
+  padding: 2px 10px;
+  font-size: 12px;
+  color: white;
+}
+#notification-dialog .message {
+display: flex;
+/* align-items: center; */
+text-align: left;
+gap: 10px;
+margin: 15px 0px;
+}
+#notification-dialog .message img{
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+#notification-dialog .message .name{
+  font-size: 14px;
   font-weight: bold;
-  text-align: center;
+  color: #2e3235;
 }
-
+#notification-dialog .message .msg-desc{
+  font-size: 14px;
+  color: #44484b;
+}
+#notification-dialog .message .time{
+  font-size: 12px;
+  color: #a6abae;
+}
 /* Style the dialog content */
 #notification-dialog p {
   margin-bottom: 10px;
