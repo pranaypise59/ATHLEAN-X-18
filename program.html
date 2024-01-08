@@ -260,6 +260,21 @@
               suscipit. <a href="#">Read More</a> </div>
           </div>
         </div>
+        <hr>
+        <div class="shuffle-container">
+
+          <div class="left">
+            <button id="shuffleButton" onclick="shuffleImages()">Shuffle (Low Cards)</button>
+            <img id="leftImage" src="/images/cards_png/deck-of-cards-xx-unflipped.jpg" alt="Left Image">
+          </div>
+
+          <div class="right">
+
+            <button id="nextButton" onclick="nextImage()">Next</button>
+            <img id="rightImage" src="/images/cards_png/c2.png" alt="Right Image">
+          </div>
+      </div>
+
         <div class="tab-pane fade" id="teb-menu-two" role="tabpanel" aria-labelledby="teb-menu-two-tab">
           <div class="teb-content">
             <div class="note-list">
@@ -598,6 +613,45 @@
 <script src="js/owl.carousel.js" type="text/javascript"></script> 
 <script src="js/smartmenu.js" type="text/javascript"></script> 
 <script src="js/custom.js" type="text/javascript"></script> 
+<script>
+  
+
+//   Js for Shuffle Utility 
+const leftImage = "images/cards_png/deck-of-cards-xx-unflipped.jpg"; 
+const images = [
+    "images/cards_png/c2.png",
+    "images/cards_png/c3.png",
+   "images/cards_png/c4.png",
+   "images/cards_png/c5.png",
+   "images/cards_png/c6.png",
+   "images/cards_png/c7.png",
+   "images/cards_png/c8.png",
+   "images/cards_png/c9.png",
+   "images/cards_png/c10.png",
+    // Add more image paths as needed
+];
+
+let currentIndex = 0;
+
+function shuffleImages() {
+    currentIndex = 0;
+    const shuffledImages = [...images].sort(() => Math.random() - 0.5);
+    updateImages(shuffledImages);
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImages(images);
+}
+
+function updateImages(imageList) {
+    document.getElementById("leftImage").src = leftImage;
+    document.getElementById("rightImage").src = imageList[currentIndex];
+}
+
+// Initialize with the default images
+updateImages(images);
+</script>
 <!--END-JS-->
 </body>
 </html>

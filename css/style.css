@@ -5618,3 +5618,38 @@ content: '' !important;
   font-size: 1.5rem;
   color: #333;
 }
+
+.shuffle-container {
+  display: flex;
+  width: 100%;
+  max-width: 90vw;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  border-top: 2px solid #595959;
+  border-bottom: 2px solid #595959;
+  padding: 5% 0px;
+  margin-bottom: 8%;
+}
+.shuffle-container .left, .shuffle-container .right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.shuffle-container img{
+  border-radius: 5px;
+}
+.shuffle-container button{
+  padding: 4px 11px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-radius: 50px;
+  outline: none;
+  color: #ffffff;
+  background: none;
+  border: 2px solid #535353;
+  transition: ease-in-out 0.5s;
+}
+.shuffle-container button:hover{
+  background: #cc0000;
+}

@@ -9733,3 +9733,14 @@
     font-size: 5px !important;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .shuffle-container button{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .shuffle-container button{
+    font-size: 10px;
+  }
+}
