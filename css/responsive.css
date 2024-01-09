@@ -5642,6 +5642,11 @@
   .download-block.download-block-2 .challenge-scores-block .label-block b {
     font-size: 15px;
   }
+  #notification-dialog{
+    top: -20px;
+    left: 50%;
+    transform: translateX(-15%);
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -7781,6 +7786,9 @@
     padding-bottom: 25px;
     margin-bottom: 25px;
   }
+  #notification-dialog{
+    transform: translateX(-35%);
+  }
 }
 @media (max-width: 600px) {
   .container {
@@ -9687,6 +9695,9 @@
   }
   #mexcalculator-sec .box2 input{
     width: 70vw;
+  }
+  #notification-dialog{
+    transform: translateX(-50%);
   }
 }
 

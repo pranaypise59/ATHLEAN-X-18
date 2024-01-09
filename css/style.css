@@ -317,6 +317,7 @@ section, header, footer {
   display: inline-block;
   margin-left: 40px;
   position: relative;
+  cursor: pointer;
 }
 .header_info_right .mail_link span {
   width: 20px;
@@ -5573,22 +5574,27 @@ content: '' !important;
   margin-left: 10px;
   letter-spacing: 3px;
 }
+.notification_container{
 
+}
 #notification-dialog {
   background-color: #fff;
   border-radius: 4px;
   padding: 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   width: 400px;
+  min-width: 8;
   max-width: 80vw;
   border-color: red;
   position: absolute;
-  right: 14vw;
-  top: 70px;
+  right:-60px;
+  top: 28px;
   color: black;
   z-index: 99999999999999;
   transition: ease-in-out 0.4s;
   display: none;
+  max-height: 80vh;
+  overflow: auto;
 }
 
 .header_info_right #plaintriangle {
