@@ -5707,3 +5707,96 @@ margin: 15px 0px;
 .shuffle-container button:hover{
   background: #cc0000;
 }
+
+/* Navbar Program Related Stylings */
+
+#main-menu #programs li,#main-menu #bonuses li{
+  width: 400px;
+}
+
+#main-menu #programs .program-card{
+  display: flex;
+  gap: 20px;
+  width: 1;
+  align-items: center;
+  margin: 20px 10px;
+  width: 80%;
+  padding-right: 10px;
+}
+
+#main-menu #programs .program-card img{
+  width: 100px;
+  height: 100px;
+}
+#main-menu #programs .program-card .title{
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+#main-menu #programs .program-card .desc{
+  font-size: 12px;
+  opacity: 0.5;
+  width: 100%;
+}
+
+#main-menu #programs .program-card button{
+  font-size: 12px;
+  padding: 4px 11px;
+  cursor: pointer;
+  border-radius: 30px;
+  outline: none;
+  color: #ffffff;
+  background: none;
+  border: 2px solid #535353;
+  transition: ease-in-out 0.5s;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  text-transform: capitalize;
+}
+#main-menu #programs .program-card .active{
+  background: red;
+}
+#main-menu #programs .program-card button:hover{
+  background: red !important;
+}
+
+
+/* Bonus Section in navbar Program */
+
+#main-menu #bonuses .bonus-card{
+  width: 80%;
+  margin-left: 5px;
+}
+
+#main-menu #bonuses .bonus{
+  height: 50px;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+#main-menu #bonuses .title{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+#main-menu #bonuses .bonus .text{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+#main-menu #bonuses .bonus::after{
+  content: '';
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  background-image: url('/images/bonus-caret.png');
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.6);
+  opacity: 0.4;
+}
