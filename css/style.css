@@ -5628,11 +5628,16 @@ content: '' !important;
   color: white;
 }
 #notification-dialog .message {
-display: flex;
-/* align-items: center; */
-text-align: left;
-gap: 10px;
-margin: 15px 0px;
+  text-align: left;gap: 10px;
+  margin: 15px 0px;
+  border-bottom: 1;
+  border-bottom: 1px solid #00000030;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+#notification-dialog .message:last-child{
+  border-bottom: none;
+  padding-bottom: 0;
 }
 #notification-dialog .message img{
   border-radius: 5px;
