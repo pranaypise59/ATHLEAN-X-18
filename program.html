@@ -286,17 +286,21 @@
         </div>
         <hr>
         <div class="shuffle-container">
-
+        <div class="buttons">
+          <button id="shuffleButton" onclick="shuffleImages()">Shuffle (Low Cards)</button>
+          <button id="nextButton" onclick="nextImage()">Next</button>
+          <button id="nextButton" onclick="nextImage()">Shuffle (Odd Cards)</button>
+          <button id="nextButton" onclick="nextImage()">Shuffle (Even Cards)</button>
+        </div>
+        <div class="images">
           <div class="left">
-            <button id="shuffleButton" onclick="shuffleImages()">Shuffle (Low Cards)</button>
             <img id="leftImage" src="/images/cards_png/deck-of-cards-xx-unflipped.jpg" alt="Left Image">
           </div>
 
           <div class="right">
-
-            <button id="nextButton" onclick="nextImage()">Next</button>
             <img id="rightImage" src="/images/cards_png/c2.png" alt="Right Image">
           </div>
+        </div>
       </div>
 
         <div class="tab-pane fade" id="teb-menu-two" role="tabpanel" aria-labelledby="teb-menu-two-tab">
