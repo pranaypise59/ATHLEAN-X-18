@@ -2775,7 +2775,7 @@ section, header, footer {
 .comment-box-det {
   overflow: hidden;
   padding-left: 57px;
-  overflow-y: visible;
+  /* overflow-y: visible; */
 }
 .comment-box-det-inn {
   float: left;
