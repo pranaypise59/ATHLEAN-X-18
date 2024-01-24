@@ -2145,6 +2145,8 @@ section, header, footer {
   width: 100%;
   position: relative;
   padding: 29px;
+  max-height: 250px;
+  overflow: auto;
 }
 .search_box_top .search-box ul li {
   float: left !important;
@@ -3601,11 +3603,12 @@ section, header, footer {
   padding-bottom: 0;
   margin-bottom: 10px;
 }
-.box-images ul::-webkit-scrollbar {
+.box-images ul::-webkit-scrollbar, .search_box_top .search-box ul::-webkit-scrollbar {
   border-radius: 20px;
   height: 5px;
+  width: 5px;
 }
-.box-images ul::-webkit-scrollbar-track {
+.box-images ul::-webkit-scrollbar-track, .search_box_top .search-box ul::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -3613,7 +3616,10 @@ section, header, footer {
   background-color:rgba(255, 0, 0, 0.698); /* Adjust opacity and color */
   border-radius: 10px;
 }
-
+.search_box_top .search-box ul::-webkit-scrollbar-thumb{
+  background-color:rgba(76, 76, 76, 0.216); 
+  border-radius: 10px;
+}
 .profile-sec .box-images ul {
   float: left;
   justify-content: center;
