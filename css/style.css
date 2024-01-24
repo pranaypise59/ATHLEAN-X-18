@@ -1211,6 +1211,46 @@ section, header, footer {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
+
+#banner_container {
+  position: absolute;
+  width: 60px;
+  height: 200px;
+  background-color: #a40e00; 
+  color: #fff; 
+  padding: 10px 20px; 
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999999999999;
+}
+#banner_container .content{
+  transform: rotate(-90deg);
+  text-wrap: nowrap;
+}
+#banner_container p {
+  line-height: 1.2;
+  text-align: left;
+}
+#banner_container_mobile{
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  background-color: #a40e00; 
+  color: #fff; 
+  padding: 10px 20px; 
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  text-align: left;
+  z-index: 99999999999999999;
+}
 .prodcut_model .modal, .modal-open {
   padding-right: 0px !important;
 }

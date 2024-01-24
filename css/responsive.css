@@ -2540,6 +2540,10 @@
   .prodcut_model .btn-primary img {
     max-width: 65px;
   }
+  #banner_container{
+    width: 55px;
+    height: 180px;
+  }
   .prodcut_model .modal-dialog {
     max-width: 1080px;
   }
@@ -4478,6 +4482,10 @@
   .prodcut_model .btn-primary img {
     max-width: 60px;
   }
+  #banner_container{
+    width: 50px;
+    height: 180px;
+  }
   .prodcut_model .modal-dialog {
     max-width: 750px;
   }
@@ -5864,6 +5872,12 @@
   }
   .prodcut_model .btn-primary img {
     max-width: 60px;
+  }
+  #banner_container{
+    display: none;
+  }
+  #banner_container_mobile{
+    display: flex;
   }
   .prodcut_model .modal-dialog {
     max-width: 580px;
@@ -8038,6 +8052,10 @@
   }
   .prodcut_model .btn-primary img {
     max-width: 60px;
+  }
+  #banner_container_mobile{
+    width: 180px;
+    height: 48px;
   }
   .prodcut_model .modal-dialog {
     max-width: 300px;
