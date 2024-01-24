@@ -5695,10 +5695,21 @@ content: '' !important;
   border-bottom: 2px solid #595959;
   padding: 5% 0px;
   margin-bottom: 8%;
+  font-size: 16px;
+}
+.shuffle-container .buttons .left, .shuffle-container .buttons .right {
+  width: calc(50% - 10px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 .shuffle-container .images{
   display: flex;
   gap: 30px;
+  justify-content: space-around;
+  width: 70%;
 }
 .shuffle-container .buttons {
   display: flex;
@@ -5706,6 +5717,7 @@ content: '' !important;
   margin-bottom: 50px;
   flex-wrap: wrap;
   justify-content: center;
+  width: 70%;
 }
 .shuffle-container img{
   border-radius: 5px;

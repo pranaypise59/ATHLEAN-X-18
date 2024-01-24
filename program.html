@@ -287,10 +287,15 @@
         <hr>
         <div class="shuffle-container">
         <div class="buttons">
-          <button id="shuffleButton" onclick="shuffleImages()">Shuffle (Low Cards)</button>
-          <button id="nextButton" onclick="nextImage()">Next</button>
-          <button id="nextButton" onclick="nextImage()">Shuffle (Odd Cards)</button>
-          <button id="nextButton" onclick="nextImage()">Shuffle (Even Cards)</button>
+          <div class="left">
+            <button id="shuffleButton" onclick="shuffleImages()">Shuffle (Low Cards)</button>
+            <button id="nextButton" onclick="nextImage()">Shuffle (Odd Cards)</button>
+            <button id="nextButton" onclick="nextImage()">Shuffle (Even Cards)</button>
+          </div>
+          
+          <div class="right">
+            <button id="nextButton" onclick="nextImage()">Next</button>
+          </div>
         </div>
         <div class="images">
           <div class="left">

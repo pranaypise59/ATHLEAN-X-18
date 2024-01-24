@@ -2361,6 +2361,12 @@
   .download-block.download-block-2 .challenge-scores-block .label-block b {
     font-size: 19px;
   }
+  .shuffle-container .buttons{
+    width: 80%;
+  }
+  .shuffle-container .images{
+    width: 80%;
+  }
 }
 @media (max-width: 1200px) {
   .no_padding {
@@ -4060,6 +4066,9 @@
   .download-block.download-block-2 .challenge-scores-block .label-block b {
     font-size: 16px;
   }
+  .shuffle-container{
+    font-size: 14px;
+  }
 }
 @media (min-width: 992px) {
   .header_info .box-images ul{
@@ -5655,6 +5664,12 @@
     top: -20px;
     left: 50%;
     transform: translateX(-15%);
+  }
+  .shuffle-container .buttons{
+    width: 100%;
+  }
+  .shuffle-container .images{
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -7803,6 +7818,13 @@
   }
   #notification-dialog{
     transform: translateX(-35%);
+  }
+  .shuffle-container .buttons{
+    font-size: 12px;
+    gap: 0;
+  }
+  .shuffle-container .buttons .left, .shuffle-container .buttons .right{
+    width: 50%;
   }
 }
 @media (max-width: 600px) {
