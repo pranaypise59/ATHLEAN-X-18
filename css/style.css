@@ -3558,7 +3558,7 @@ section, header, footer {
   margin-bottom: 10px;
 }
 .box-images ul::-webkit-scrollbar {
-  border-radius: 10px;
+  border-radius: 20px;
   height: 5px;
 }
 .box-images ul::-webkit-scrollbar-track {
@@ -3566,7 +3566,7 @@ section, header, footer {
 }
 
 .box-images ul::-webkit-scrollbar-thumb {
-  background-color:rgba(255, 255, 255, 0.143); /* Adjust opacity and color */
+  background-color:rgba(255, 0, 0, 0.698); /* Adjust opacity and color */
   border-radius: 10px;
 }
 
