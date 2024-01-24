@@ -134,7 +134,7 @@
     width: 30px;
   }
   .challenge-user-info-det .box-images ul li span {
-    width: 32px;
+    width: 32px !important;
   }
   .challenge-user-info {
     padding-left: 50px;
@@ -2153,7 +2153,7 @@
     right: 14px;
   }
   .box-images ul li span {
-    width: 24px;
+    width: 30px;
   }
   .home_info {
     max-width: 550px;
@@ -3347,7 +3347,7 @@
   }
   .box-images ul li {
     margin-left: -1px;
-    height: 62px;
+    /* height: 62px; */
     width: 20px;
   }
   .play_btn {
@@ -4001,6 +4001,7 @@
   }
   .challenge-user-info-det .box-images ul li span {
     width: 32px;
+    line-height: 62px;
   }
   .top-scrore-block-sec .top-scrore-block-item {
     padding: 25px;

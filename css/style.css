@@ -3518,9 +3518,9 @@ section, header, footer {
 }
 .box-images ul li {
   position: relative;
-  height: 62px;
+  height: 72px;
   width: 32px;
-  line-height: 62px;
+  line-height: 70px;
   display: inline-block;
   text-align: center;
   vertical-align: bottom;
@@ -3537,6 +3537,7 @@ section, header, footer {
   vertical-align: middle;
   white-space: nowrap;
   transform: rotate(-90deg);
+  width: 32px;
   /*	writing-mode: sideways-lr;
 	-webkit-writing-mode: vertical-rl;
 	-ms-writing-mode: tb-rl;*/
