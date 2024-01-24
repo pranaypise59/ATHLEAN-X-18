@@ -3549,6 +3549,10 @@ section, header, footer {
   width: 100%;
   max-width: 100%;
 }
+.comment-box-det .box-images ul li{
+  height: 82px;
+  line-height: 82px;
+}
 .box-images ul {
   float: left;
   justify-content: start;
@@ -3579,9 +3583,9 @@ section, header, footer {
 }
 .comment-box .accordion .accordion-body .comment-box-mini .box-images ul li {
   position: relative;
-  height: 62px;
+  height: 72px;
+  line-height: 72px;
   width: 32px !important;
-  line-height: 62px;
   display: inline-block !important;
   text-align: center;
   vertical-align: bottom;
