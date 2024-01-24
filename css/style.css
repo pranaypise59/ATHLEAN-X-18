@@ -5639,7 +5639,26 @@ content: '' !important;
   max-height: 80vh;
   overflow: auto;
 }
-
+.more-messages {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+}
+.more-messages a{
+  padding: 6px 14px !important;
+  cursor: pointer;
+  border-radius: 5px;
+  border-radius: 50px;
+  outline: none;
+  color: #ffffff;
+  background: red;
+  font-size: 13px;
+}
+.more-messages a:hover{
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+}
 .header_info_right #plaintriangle {
   filter: invert(1);
   height: 15px;
