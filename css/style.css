@@ -409,10 +409,15 @@ section, header, footer {
   color: #fff;
 }
 .box-images {
-  position: absolute;
+  position: relative;
   right: 0px;
   z-index: 9;
-  margin-top: 2px;
+  margin-top: 0px;
+  border-top: 1px solid #3e3e3e;
+  padding: 6px 0px;
+  text-align: center;
+  width: 100%;
+  max-width: 100% !important;
 }
 .max-shared {
   background: url("../images/max-shared.png");
@@ -430,6 +435,21 @@ section, header, footer {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   line-height: 38px;
+}
+.max-shared a:after {
+  content: "\f078";
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
+}
+.header_info.active .max-shared a:after {
+  content: "\f106";
+  font-family: 'Font Awesome 6 Free';
+}
+.header_info.active .box-images {
+  display: block;
 }
 .header_info .logo a.mobile_logo {
   display: none;
