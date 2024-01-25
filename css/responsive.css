@@ -4496,7 +4496,7 @@
     height: 180px;
   }
   .prodcut_model .modal-dialog {
-    max-width: 750px;
+    /* max-width: 750px; */
   }
   .prodcut_model .btn-close {
     top: 45px;
@@ -6424,7 +6424,10 @@
     max-width: 60px;
   }
   .prodcut_model .modal-dialog {
-    max-width: 300px;
+    max-width: 90vw;
+  }
+  #productModal .modal-body{
+    width: 80%;
   }
   .prodcut_model .btn-close {
     top: 10px;
@@ -8083,7 +8086,10 @@
     height: 48px;
   }
   .prodcut_model .modal-dialog {
-    max-width: 300px;
+    /* max-width: 300px; */
+  }
+  #productModal .modal-body{
+    width: 90%;
   }
   .prodcut_model .btn-close {
     top: 10px;
