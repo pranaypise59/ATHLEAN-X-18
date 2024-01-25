@@ -5671,9 +5671,8 @@
   .shuffle-container .images{
     width: 100%;
   }
-  .search_box_top .search-box ul {
-    max-height: 350px;
-    overflow: auto;
+  .comment-box-inn{
+    display: block;
   }
 }
 @media (max-width: 767px) {

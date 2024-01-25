@@ -2145,8 +2145,8 @@ section, header, footer {
   width: 100%;
   position: relative;
   padding: 29px;
-  max-height: 250px;
-  overflow: auto;
+  /* max-height: 250px;
+  overflow: auto; */
 }
 .search_box_top .search-box ul li {
   float: left !important;
@@ -2814,10 +2814,13 @@ section, header, footer {
   width: 100%;
   position: relative;
 }
+.comment-box-inn{
+  display: flex;
+}
 .comment-box-det {
-  overflow: hidden;
+  /* overflow-x: hidden; */
   padding-left: 57px;
-  /* overflow-y: visible; */
+  /* overflow-y: auto; */
 }
 .comment-box-det-inn {
   float: left;
