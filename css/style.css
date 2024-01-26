@@ -167,8 +167,11 @@ section, header, footer {
   text-align: left;
   vertical-align: middle;
   background-color: #212121;
-  padding: 0px 35px;
+  /* padding: 0px 35px; */
   border-bottom: 2px solid #cf0e0e;
+}
+.header_info .row{
+  margin: 0px 35px;
 }
 .header_info .logo {
   width: auto;
@@ -3630,7 +3633,7 @@ section, header, footer {
   text-align: left;
   margin: 0px;
   padding-bottom: 0;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .box-images ul::-webkit-scrollbar, .search_box_top .search-box ul::-webkit-scrollbar {
   border-radius: 20px;
