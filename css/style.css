@@ -422,17 +422,31 @@ section, header, footer {
   width: 100%;
   max-width: 100% !important;
   overflow: hidden;
-  max-height: 300px;
+  animation: slide-up 1s ease-out forwards;
+  display: none;
 }
 .active .box-images {
-    animation: slide .25s ease-in-out;
+    animation: slide 1s ease-in forwards;
 }
 @keyframes slide {
   from {
-    max-height: 10px;
+    max-height: 0px;
+    display: none;
   }
   to {
-    max-height: 300px;
+    max-height: 220px;
+    display: block;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    max-height: 120px;
+    display: block;
+  }
+  to {
+    max-height: 0px;
+    display: block;
   }
 }
 .max-shared {
