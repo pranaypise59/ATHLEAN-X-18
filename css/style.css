@@ -3577,22 +3577,23 @@ section, header, footer {
   justify-content: end;
   padding-right: 8px;
   max-width: 100%;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   text-align: right;
   display: flex;
+  overflow-y: hidden;
 }
 .box-images ul li {
   position: relative;
   height: 72px;
   width: 32px;
-  line-height: 70px;
+  line-height: 75px;
   display: inline-block;
   text-align: center;
   vertical-align: bottom;
 }
 .box-images ul li span {
   display: inline-block;
-  color: #ffffff;
+  /* color: #ffffff; */
   font-size: 11px;
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
@@ -3603,6 +3604,7 @@ section, header, footer {
   white-space: nowrap;
   transform: rotate(-90deg);
   width: 32px;
+  max-width: 100%;
   /*	writing-mode: sideways-lr;
 	-webkit-writing-mode: vertical-rl;
 	-ms-writing-mode: tb-rl;*/
