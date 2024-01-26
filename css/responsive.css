@@ -1653,7 +1653,7 @@
     font-size: 14px;
   }
   .header_info {
-    padding: 0px 30px;
+    /* padding: 0px 30px; */
   }
   .header_info .logo a img {
     width: 200px;
@@ -2408,7 +2408,7 @@
     font-size: 14px;
   }
   .header_info {
-    padding: 0px 25px;
+    /* padding: 0px 25px; */
   }
   .header_info .logo a img {
     width: 180px;
@@ -3258,7 +3258,7 @@
     font-size: 13px;
   }
   .header_info {
-    padding: 0px 20px;
+    /* padding: 0px 20px; */
   }
   .header_info .logo a img {
     width: 180px;
@@ -4132,7 +4132,7 @@
   }
   /*START-HEADER*/
   .header_info {
-    padding: 8px 50px;
+    /* padding: 8px 50px; */
     height: 78px;
   }
   .header_info .logo {
@@ -4520,7 +4520,7 @@
     margin-top: auto;
     margin-top: 0px;
     border-top: 1px solid #3e3e3e;
-    padding: 6px 0px;
+    /* padding: 6px 0px; */
     text-align: center;
     max-width: 100%;
   }
@@ -5916,7 +5916,7 @@
     margin-top: auto;
     margin-top: 0px;
     border-top: 1px solid #3e3e3e;
-    padding: 6px 0px;
+    /* padding: 6px 0px; */
     text-align: center;
     max-width: 100%;
   }
@@ -6445,7 +6445,7 @@
     margin-top: auto;
     margin-top: 0px;
     border-top: 1px solid #3e3e3e;
-    padding: 6px 0px;
+    /* padding: 6px 0px; */
     max-width: 100%;
   }
   .admin_btn {
@@ -8107,7 +8107,7 @@
     margin-top: auto;
     margin-top: 0px;
     border-top: 1px solid #3e3e3e;
-    padding: 6px 0px;
+    /* padding: 6px 0px; */
     max-width: 100%;
   }
   .admin_btn {
