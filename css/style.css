@@ -421,6 +421,19 @@ section, header, footer {
   text-align: center;
   width: 100%;
   max-width: 100% !important;
+  overflow: hidden;
+  max-height: 300px;
+}
+.active .box-images {
+    animation: slide .25s ease-in-out;
+}
+@keyframes slide {
+  from {
+    max-height: 10px;
+  }
+  to {
+    max-height: 300px;
+  }
 }
 .max-shared {
   background: url("../images/max-shared.png");
