@@ -3590,6 +3590,10 @@ section, header, footer {
   display: inline-block;
   text-align: center;
   vertical-align: bottom;
+  cursor: pointer;
+}
+.box-images ul li:hover{
+  opacity: 1 !important;
 }
 .box-images ul li span {
   display: inline-block;
