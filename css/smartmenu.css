@@ -208,7 +208,7 @@
 
 .sm,
 .sm ul,
-.sm li { display: block; list-style: none; margin: 0; padding: 0; line-height: normal; direction: ltr; text-align: left;z-index: 9999999999; }
+.sm li { display: block; list-style: none; margin: 0; padding: 0; line-height: normal; direction: ltr; text-align: left; }
 
 .sm-rtl,
 .sm-rtl ul,

@@ -539,7 +539,7 @@ section, header, footer {
   width: 100%;
   position: relative;
   padding-top: 20px;
-  z-index: 9999999;
+  z-index: 99;
   max-width: 650px;
   top: -250px;
 }
