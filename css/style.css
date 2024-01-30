@@ -449,24 +449,30 @@ section, header, footer {
     display: block;
   }
 }
-.max-shared {
-  background: url("../images/max-shared.png");
-  width: 162px;
-  height: 38px;
+
+.trapezoid {
+  min-width: 250px;
+  height: 50px;
+  background: #cf0e0e;
+  line-height: 60px;
+  bottom: -35px;
+  clip-path: polygon(0 31%, 100% 30%, 85% 99%, 14% 99%);
+}
+
+.program-displaytitle {    
+  width: 162px;    
   font-size: 21px;
   font-weight: bold;
   text-align: center;
   position: absolute;
   right: 0px;
-  left: 0px;
-  bottom: -38px;
+  left: 0px;    
   margin: auto;
   z-index: 9;
   font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  line-height: 38px;
+  text-transform: uppercase;    
 }
-.max-shared a:after {
+.program-displaytitle a:after {
   content: "\f078";
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
@@ -474,7 +480,7 @@ section, header, footer {
   position: relative;
   top: -1px;
 }
-.header_info.active .max-shared a:after {
+.header_info.active .program-displaytitle a:after {
   content: "\f106";
   font-family: 'Font Awesome 6 Free';
 }

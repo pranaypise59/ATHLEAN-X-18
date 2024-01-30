@@ -136,7 +136,7 @@ jQuery(document).ready(function () {
 	})
 
 
-	jQuery('.max-shared').on('click', function () {
+	jQuery('.program-displaytitle').on('click', function () {
 		jQuery('.header_info').toggleClass('active');
 	});
 
