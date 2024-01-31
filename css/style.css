@@ -5939,9 +5939,11 @@ content: '' !important;
 }
 #main-menu #programs .program-card .active{
   background: red;
+  color: white;
 }
 #main-menu #programs .program-card button:hover{
   background: red !important;
+  color: white;
 }
 
 
