@@ -416,16 +416,19 @@ section, header, footer {
   right: 0px;
   z-index: 9;
   margin-top: 0px;
-  border-top: 1px solid #3e3e3e;
+  /* border-top: 1px solid #3e3e3e; */
   padding: 0px;
   text-align: center;
   width: 100%;
   max-width: 100% !important;
-  overflow: hidden;
+}
+.header-boximg{
   animation: slide-up 1s ease-out forwards;
   display: none;
+  overflow: hidden;
+
 }
-.active .box-images {
+.active .header-boximg {
     animation: slide 1s ease-in forwards;
 }
 @keyframes slide {
