@@ -422,15 +422,8 @@ section, header, footer {
   width: 100%;
   max-width: 100% !important;
 }
-.header-boximg{
-  animation: slide-up 1s ease-out forwards;
-  display: none;
-  overflow: hidden;
 
-}
-.active .header-boximg {
-    animation: slide 1s ease-in forwards;
-}
+
 @keyframes slide {
   from {
     max-height: 0px;
@@ -5988,4 +5981,82 @@ content: '' !important;
   top: 50%;
   transform: translateY(-50%) scale(0.6);
   opacity: 0.4;
+}
+
+
+/* Styling for header program badges  */
+.header-box-image{
+  position: relative;
+  right: 0px;
+  z-index: 9;
+  margin-top: 0px;
+  padding: 0px;
+  text-align: center;
+  width: 100%;
+  max-width: 100% !important;
+  animation: slide-up 1s ease-out forwards;
+  display: none;
+  overflow: hidden;
+  float: left;
+}
+
+.active .header-box-image {
+  animation: slide 1s ease-in forwards;
+}
+
+.header_info.active .header-box-image{
+  display: block;
+}
+
+
+.header-box-image ul {
+  position: relative;
+  transform: skew(-12deg);
+  justify-content: start;
+  padding-right: 8px;
+  max-width: 100%;
+  display: flex;
+  overflow-y: hidden;
+  text-align: left;
+  margin: 0px;
+  padding-bottom: 0;
+}
+.header-box-image ul li {
+  position: relative;
+  height: 72px;
+  width: 32px;
+  line-height: 75px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+.header-box-image ul li:hover{
+  opacity: 1 !important;
+}
+.header-box-image ul li span {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  width: 32px;
+  max-width: 100%;
+}
+.header-box-image ul::-webkit-scrollbar{
+  border-radius: 20px;
+  height: 5px;
+  width: 5px;
+}
+.header-box-image ul::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header-box-image ul::-webkit-scrollbar-thumb {
+  background-color:rgba(255, 0, 0, 0.698); /* Adjust opacity and color */
+  border-radius: 10px;
 }
