@@ -5887,16 +5887,26 @@ content: '' !important;
 /* Program section Related Stylings in Navbar  */
 
 #main-menu #programs li,#main-menu #bonuses li{
-  width: 400px;
+  width: 348px;
+}
+#programs ul::-webkit-scrollbar {
+  width: 0;  /* For Chrome, Safari, and Opera */
 }
 
+#programs ul {
+  scrollbar-width: none;  /* For Firefox */
+  max-height: 100vh;
+  overflow: scroll;
+}
+.sm li ul:first-child{
+  z-index: 99;
+}
 #main-menu #programs .program-card{
   display: flex;
   gap: 20px;
-  width: 1;
   align-items: center;
   margin: 20px 10px;
-  width: 80%;
+  width: 90%;
   padding-right: 10px;
 }
 
