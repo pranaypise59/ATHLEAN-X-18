@@ -610,45 +610,41 @@
       <p><b>Please Note:</b> Program downloads are time stamped and tracked. Downloading the program makes it unrecoverable in the instance of a return and therefore nullifies refund/exchange eligibility.</p>
     </div>
     <div class="teb-menu">
-      <ul class="nav nav-teb-menu" id="teb-menu-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn active" id="teb-menu-ax-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-ax" type="button" role="tab" aria-controls="teb-menu-ax" aria-selected="true">AX-1</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn" id="teb-menu-tnt-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-tnt" type="button" role="tab" aria-controls="teb-menu-tnt" aria-selected="false">TNT</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn" id="teb-menu-ax-2-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-ax-2" type="button" role="tab" aria-controls="teb-menu-ax-2" aria-selected="false">AX-2</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn" id="teb-menu-xero-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-xero" type="button" role="tab" aria-controls="teb-menu-xero" aria-selected="false">XERO</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn" id="teb-menu-shred-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-shred" type="button" role="tab" aria-controls="teb-menu-shred" aria-selected="false">SHRED</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn" id="teb-menu-size-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-size" type="button" role="tab" aria-controls="teb-menu-size" aria-selected="false">SIZE</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn" id="teb-menu-xx-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-xx" type="button" role="tab" aria-controls="teb-menu-xx" aria-selected="false">XX</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn" id="teb-menu-nxt-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-nxt" type="button" role="tab" aria-controls="teb-menu-nxt" aria-selected="false">NXT</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn" id="teb-menu-ua-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-ua" type="button" role="tab" aria-controls="teb-menu-ua" aria-selected="false">UA</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link coman-btn" id="teb-menu-break-tab" data-bs-toggle="pill" data-bs-target="#teb-menu-break" type="button" role="tab" aria-controls="teb-menu-break" aria-selected="false">BREAK</button>
-        </li>
-      </ul>
+      <div class="news_feed_right">
+        <div class="leaderboard_block">
+          <div class="form-group">
+            <label for="programSelector" class="form-label">Select Program:</label>
+            <select name="programSelector" id="programSelector" class="form-select">
+              <option value="teb-menu-ax">AX-1</option>
+              <option value="teb-menu-tnt">TNT</option>
+              <option value="teb-menu-ax-2">AX-2</option>
+              <option value="teb-menu-xero">XERO</option>
+              <option value="teb-menu-shred" selected>SHRED</option>
+              <option value="teb-menu-size">SIZE</option>
+              <option value="teb-menu-xx">XX</option>
+              <option value="teb-menu-nxt">NXT</option>
+              <option value="teb-menu-ua">UA</option>
+              <option value="teb-menu-ax">AX-1</option>
+              <option value="teb-menu-tnt">TNT</option>
+              <option value="teb-menu-ax-2">AX-2</option>
+              <option value="teb-menu-xero">XERO</option>
+              <option value="teb-menu-shred" selected>SHRED</option>
+              <option value="teb-menu-size">SIZE</option>
+              <option value="teb-menu-xx">XX</option>
+              <option value="teb-menu-nxt">NXT</option>
+              <option value="teb-menu-ua">UA</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
       <div class="tab-content" id="teb-menu-tabContent">
         <div class="tab-pane fade active show" id="teb-menu-ax" role="tabpanel" aria-labelledby="teb-menu-ax-tab">
           <div class="teb-content">
             <div class="download-block">
               <div class="row">
                 <div class="col-md-7 align-self-center">
-                  <h3>nxt 1 - Anabolix Download</h3>
+                  <h3>ax 1 - Anabolix Download</h3>
                   <p>You Have <span>2 </span> vailable activation remaining.</p>
                 </div>
                 <div class="col-md-5 align-self-center">
@@ -997,7 +993,7 @@
             <div class="download-block">
               <div class="row">
                 <div class="col-md-7 align-self-center">
-                  <h3>nxt 1 - Anabolix Download</h3>
+                  <h3>tnt 1 - Anabolix Download</h3>
                   <p>You Have <span>2 </span> vailable activation remaining.</p>
                 </div>
                 <div class="col-md-5 align-self-center">
@@ -4510,6 +4506,20 @@
          ga('create', 'UA-64633646-1', 'auto');
          ga('send', 'pageview');
       </script> 
+      <script>
+         $('#programSelector').on('change', function() {
+         var tabContent = document.getElementById('teb-menu-tabContent');
+   
+         var selectedProgram = document.querySelector('.nice-select .list .option.selected').getAttribute('data-value');
+           Array.from(tabContent.children).forEach(function (tabPane) {
+             tabPane.classList.remove('show', 'active');
+           });
+     
+           var selectedTabPane = document.getElementById(selectedProgram);
+           selectedTabPane.classList.add('show', 'active');
+         
+              });
+        </script>
 <!--END-JS-->
 </body>
 </html>

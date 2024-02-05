@@ -1117,6 +1117,25 @@ section, header, footer {
 .news_feed_right .leaderboard_block a:last-child {
   margin-left: 0px !important;
 }
+.download-center-sec .nice-select .list{
+  max-height: 80vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.download-center-sec .nice-select .list::-webkit-scrollbar, .search_box_top .search-box ul::-webkit-scrollbar {
+  border-radius: 20px;
+  height: 5px;
+  width: 5px;
+}
+.download-center-sec .nice-select .list::-webkit-scrollbar-track, .search_box_top .search-box ul::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.download-center-sec .nice-select .list::-webkit-scrollbar-thumb {
+  background-color:rgba(255, 0, 0, 0.698); 
+  border-radius: 10px;
+}
+
 .news_feed_right .top_scores_block_list h3 {
   float: left;
   width: 100%;
