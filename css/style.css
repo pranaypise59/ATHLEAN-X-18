@@ -1118,7 +1118,7 @@ section, header, footer {
   margin-left: 0px !important;
 }
 .download-center-sec .nice-select .list{
-  max-height: 80vh;
+  max-height: 500px;
   overflow: scroll;
   overflow-x: hidden;
 }
